@@ -1,0 +1,58 @@
+.about-me{
+    color:black;
+    width: 100%;
+    // height: fit-content;
+    h1{
+        padding: 20px;
+        width: 100vw;
+        text-align: center;
+        margin: 100px 0;
+    }
+    .message{
+        font-family: 'Patrick Hand', cursive;
+        font-size: 0.8em;
+        width: 40%;
+        height: fit-content;
+        margin: 40px;
+        padding: 20px;
+        background-color: rgb(235, 255, 146);
+        border-bottom:10px solid transparent;
+        border-right:8px solid transparent;
+        border-image: linear-gradient(to right, rgb(17, 17, 17), rgb(75, 79, 23)) 1;
+        text-decoration: underline dashed ;
+        text-underline-offset: 0.4em;
+        line-height: 2em;
+        position: relative;
+        transform: rotate(-5deg);
+        
+        .pin{
+            width: 40px;
+            height: 40px;
+            background-color: rgb(222, 5, 5);
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            border-radius: 50%;
+            border-right: 3px solid black;
+            border-bottom: 3px solid black;
+            div{
+                width: 20px;
+                height: 20px;
+                border: 1px solid black;
+                border-right: 2px solid black;
+                border-bottom: 2px solid black;
+                position: absolute;
+                top:50%;
+                left: 50%;
+                border-radius: 50%;
+                background-color: red;
+                transform: translate(-50%, -50%);
+            }
+        }
+        @media screen and (orientation: portrait){
+            font-size: 0.6em;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+}

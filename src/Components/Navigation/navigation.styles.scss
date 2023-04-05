@@ -1,7 +1,7 @@
 .navigation {
     position: fixed;
     right: 0;
-    top: 0;
+    bottom: 0;
     color: white;
     height: 100vh;
     width: 10vw;
@@ -51,7 +51,7 @@
 
         li.target-icon {
             svg {
-                fill: rgb(160, 248, 210);
+                fill: rgba(106, 235, 235, 1);
             }
         }
     }
