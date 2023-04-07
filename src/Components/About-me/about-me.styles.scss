@@ -1,58 +1,101 @@
-.about-me{
-    color:black;
+.about-me {
+    color: black;
     width: 100%;
-    // height: fit-content;
-    h1{
+
+    .stick-notes {
+        display: flex;
+        background-color: rgba(106, 235, 235, 1);
+
+        @media screen and (orientation:portrait) {
+            display: block;
+        }
+    }
+
+    h1 {
+        display: block;
         padding: 20px;
         width: 100vw;
         text-align: center;
-        margin: 100px 0;
+        margin: 10vh 0;
+        color: rgb(0, 0, 0);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
     }
-    .message{
+
+    .stick-note {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.5);
         font-family: 'Patrick Hand', cursive;
         font-size: 0.8em;
         width: 40%;
-        height: fit-content;
+        height: auto;
         margin: 40px;
         padding: 20px;
-        background-color: rgb(235, 255, 146);
-        border-bottom:10px solid transparent;
-        border-right:8px solid transparent;
-        border-image: linear-gradient(to right, rgb(17, 17, 17), rgb(75, 79, 23)) 1;
-        text-decoration: underline dashed ;
         text-underline-offset: 0.4em;
         line-height: 2em;
         position: relative;
-        transform: rotate(-5deg);
-        
-        .pin{
-            width: 40px;
-            height: 40px;
-            background-color: rgb(222, 5, 5);
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            border-radius: 50%;
-            border-right: 3px solid black;
-            border-bottom: 3px solid black;
-            div{
-                width: 20px;
-                height: 20px;
-                border: 1px solid black;
-                border-right: 2px solid black;
-                border-bottom: 2px solid black;
-                position: absolute;
-                top:50%;
-                left: 50%;
-                border-radius: 50%;
-                background-color: red;
-                transform: translate(-50%, -50%);
-            }
-        }
-        @media screen and (orientation: portrait){
+
+        @media screen and (orientation: portrait) {
             font-size: 0.6em;
             width: 80%;
-            margin: 0 auto;
+            margin: 40px auto;
+        }
+    }
+
+    .skills {
+        @media screen and (orientation: landscape) {
+            width: 30vw;
+            margin-left: 10vw;
+        }
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 1.2em;
+        position: relative;
+        bottom: 2em;
+        text-align: center;
+        
+        .skills-title {
+            grid-column-start: 1;
+            grid-column-end: 4;
+
+            p {
+                font-size: 0.8em;
+                line-height: 0;
+            }
+
+            input{
+                height: 3em;
+                border-radius: 20px;
+                text-align: center;
+                font-family: 'Patrick Hand', cursive;
+                font-size: 1em;
+                border-right: 3px solid black;
+                border-bottom: 3px solid black;
+            }
+        }
+        div {
+            img {
+                background-color: white;
+                height: 3em;
+                width: 3em;
+                border-radius: 10px;
+                border-right: 3px solid black;
+                border-bottom: 3px solid black;
+
+                &:hover {
+                    border-right: none;
+                    border-bottom: none;
+                    border-left: 3px solid black;
+                    border-top: 3px solid black;
+                }
+
+                &:active {
+                    border-right: none;
+                    border-bottom: none;
+                    border-left: 3px solid black;
+                    border-top: 3px solid black;
+                }
+
+            }
         }
     }
 }
