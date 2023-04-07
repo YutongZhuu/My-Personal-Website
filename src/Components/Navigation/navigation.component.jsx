@@ -3,8 +3,8 @@ import { ReactComponent as HomeIcon } from '../../Icons/home.icon.svg';
 import { ReactComponent as AboutMeIcon } from '../../Icons/about-me.icon.svg';
 import { ReactComponent as ContactMeIcon } from '../../Icons/contact-me.icon.svg';
 import { ReactComponent as ProjectsIcon } from '../../Icons/projects.icon.svg';
-import { useRef, useEffect, useState } from 'react';
-import { scroll } from '../../Animation/fade-in.animate';
+import {  useEffect, useState } from 'react';
+import { scroll } from '../../Animation/scroll.animate';
 const Navigation = () => {
     const findBetweenArrayElements = (number, array) => {
         for (let i = 0; i < array.length; i++) {
@@ -16,14 +16,8 @@ const Navigation = () => {
 
     const [headers, setHeaders] = useState(null);
     const [iconClicked, setIconClicked] = useState(false)
-    // const isFirstRender = useRef(true);
     useEffect(() => {
         onMouseLeaveHandler();
-        // if (isFirstRender.current) {
-        //     isFirstRender.current = false;
-        //     return;
-        //   }
-
         const headersArray = Array.from(document.querySelectorAll('h1')).map((h, i) => {
             if (i == 0)
                 return 0;
@@ -31,9 +25,7 @@ const Navigation = () => {
                 return h.offsetTop
         });
         setHeaders(headersArray)
-        // console.log('useEffect')
         const scrollHandler = () => {
-            // console.log(iconClicked, 'scroll')
             if (iconClicked) return
             const icons = document.querySelectorAll('.navigation li')
             const iconNumber = findBetweenArrayElements(window.scrollY, headersArray)

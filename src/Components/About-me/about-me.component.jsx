@@ -1,4 +1,5 @@
-import './about-me.styles.scss'
+import './about-me.styles.scss';
+import { useEffect, useState } from 'react';
 const skills = [
     {
         imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/900px-JavaScript-logo.png?20120221235433",
@@ -20,7 +21,7 @@ const skills = [
         skill: 'JQuery'
     }, {
         imgUrl: "https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png",
-        skill: 'firebase'
+        skill: 'Firebase'
     }, {
         imgUrl: "https://twoearsonemouthnet.files.wordpress.com/2018/04/azure-icon-250x250.png?w=1040",
         skill: 'Microsoft Azure'
@@ -33,9 +34,23 @@ const skills = [
     }
 ]
 const AboutMe = () => {
-    // const onMouseHandler=()=>{
+    const [inputValue, setInputValue]=useState("");
+    let setTimer;
+    const onHoverHandler = (event) =>{
+        clearInterval(setTimer);
+        const input = event.target.parentNode.parentNode.childNodes[1].childNodes[1];
+        const name=event.target.name+' !';
+        let counter=0;
+        input.focus();
+        setTimer=setInterval(()=>{
+            setInputValue(name.slice(0,counter))
+            counter++
+            if(counter>name.length){
 
-    // }
+                clearInterval(setTimer)
+            }
+        }, 50)
+    }
     return (
         <div className="about-me">
             <h1>About Me</h1>
@@ -57,15 +72,14 @@ const AboutMe = () => {
 
                     <div className='skills-title'>
                         <p>What do I know?</p>
-                        <input />
+                        <input value={inputValue}/>
                     </div>
 
                     {
-                        skills.map(({ imgUrl }, i) => {
+                        skills.map(({ imgUrl, skill }, i) => {
                             return (
                                 <div key={i}>
-                                    <img src={imgUrl} />
-                                    {/* <p>{skill}</p> */}
+                                    <img src={imgUrl} name={skill} onMouseEnter={onHoverHandler}/>
                                 </div>
                             )
                         })
