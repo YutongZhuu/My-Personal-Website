@@ -34,23 +34,28 @@ const skills = [
     }
 ]
 const AboutMe = () => {
-    const [inputValue, setInputValue]=useState("");
-    let setTimer;
-    const onHoverHandler = (event) =>{
-        clearInterval(setTimer);
-        const input = event.target.parentNode.parentNode.childNodes[1].childNodes[1];
-        const name=event.target.name+' !';
-        let counter=0;
-        input.focus();
-        setTimer=setInterval(()=>{
-            setInputValue(name.slice(0,counter))
-            counter++
-            if(counter>name.length){
+    const [inputValue, setInputValue] = useState("");
+    const [timer, setTimer] = useState(null);
 
-                clearInterval(setTimer)
+    const onHoverHandler = (event) => {
+        setInputValue("");
+        const input = event.target.parentNode.parentNode.childNodes[1].childNodes[1];
+        const name = event.target.name + " !";
+        let counter = 0;
+
+        input.focus();
+
+        clearInterval(timer)
+        const Timer = setInterval(() => {
+            console.log(1, name);
+            setInputValue(name.slice(0, counter));
+            counter++;
+            if (counter > name.length) {
+                clearInterval(Timer);
             }
-        }, 50)
-    }
+        }, 400);
+        setTimer(Timer);
+    };
     return (
         <div className="about-me">
             <h1>About Me</h1>
@@ -72,14 +77,14 @@ const AboutMe = () => {
 
                     <div className='skills-title'>
                         <p>What do I know?</p>
-                        <input value={inputValue}/>
+                        <input value={inputValue} />
                     </div>
 
                     {
                         skills.map(({ imgUrl, skill }, i) => {
                             return (
                                 <div key={i}>
-                                    <img src={imgUrl} name={skill} onMouseEnter={onHoverHandler}/>
+                                    <img src={imgUrl} name={skill} onMouseEnter={onHoverHandler} />
                                 </div>
                             )
                         })
