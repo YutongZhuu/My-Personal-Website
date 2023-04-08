@@ -47,13 +47,12 @@ const AboutMe = () => {
 
         clearInterval(timer)
         const Timer = setInterval(() => {
-            console.log(1, name);
             setInputValue(name.slice(0, counter));
             counter++;
             if (counter > name.length) {
                 clearInterval(Timer);
             }
-        }, 400);
+        }, 40);
         setTimer(Timer);
     };
     return (
