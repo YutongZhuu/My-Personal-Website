@@ -1,5 +1,4 @@
 .landing-page {
-    z-index: 1;
     height: 100vh;
     background: rgb(106, 235, 235);
     background: linear-gradient(160deg, rgba(106, 235, 235, 1) 30%, rgba(106, 235, 235, 1) 49%, rgba(255, 255, 255, 1) 49%);
@@ -9,12 +8,16 @@
         opacity: 0;
         position: absolute;
         top: 30vh;
+        @media (orientation:portrait) {
+            top: 20vh;
+        }
         text-shadow: 2px 2px 4px rgba(0,0,0,0.5), -2px -2px 4px rgba(255,255,255,0.5);
         h1{
+            font-size: 1.6em;
             color: white;
         }
         p{
-            font-size: 0.9em;
+            font-size: 1.2em;
             color: aliceblue;
             margin-bottom: 50px;
         }

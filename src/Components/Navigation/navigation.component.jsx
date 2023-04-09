@@ -1,8 +1,8 @@
 import './navigation.styles.scss';
-import { ReactComponent as HomeIcon } from '../../Icons/home.icon.svg';
-import { ReactComponent as AboutMeIcon } from '../../Icons/about-me.icon.svg';
-import { ReactComponent as ContactMeIcon } from '../../Icons/contact-me.icon.svg';
-import { ReactComponent as ProjectsIcon } from '../../Icons/projects.icon.svg';
+import { ReactComponent as HomeIcon } from '../../OtherFile/home.icon.svg';
+import { ReactComponent as AboutMeIcon } from '../../OtherFile/about-me.icon.svg';
+import { ReactComponent as ContactMeIcon } from '../../OtherFile/contact-me.icon.svg';
+import { ReactComponent as ProjectsIcon } from '../../OtherFile/projects.icon.svg';
 import {  useEffect, useState } from 'react';
 import { scroll } from '../../Animation/scroll.animate';
 const Navigation = () => {
