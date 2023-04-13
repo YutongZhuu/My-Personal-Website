@@ -19,7 +19,7 @@ const LandingPage = () => {
 
     useEffect(() => {
         const pageTitle = document.querySelector('.landing-page-title');
-        const px = windowHeight < windowWidth ? (20 * window.innerHeight/ 100) : 20
+        const px = windowHeight < windowWidth ? (40 * window.innerHeight/ 100) : 20
         fadeIn(pageTitle, 'left', px, 2000)
     }, [windowWidth, windowHeight])
 

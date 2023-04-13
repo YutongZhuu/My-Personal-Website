@@ -23,7 +23,7 @@ const Navigation = () => {
             if (i == 0)
                 return 0;
             else
-                return h.offsetTop-100
+                return h.offsetTop-(window.innerWidth<window.innerHeight? 0 : 80)
         });
         setHeaders(headersArray)
         const nav_bar=document.getElementsByClassName('nav-bar')
@@ -81,7 +81,6 @@ const Navigation = () => {
         }
 
         const iconNumber = Array.from(target.parentNode.childNodes).findIndex((i) => i == target);
-        console.log(headers[iconNumber])
         scroll(headers[iconNumber], 500);
         setTimeout(() => {
             setIconClicked(false);
