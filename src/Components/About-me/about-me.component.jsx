@@ -1,5 +1,5 @@
 import './about-me.styles.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 const skills = [
     {
         imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/900px-JavaScript-logo.png?20120221235433",
@@ -57,7 +57,7 @@ const AboutMe = () => {
     };
     return (
         <div className="about-me">
-            <h1>About Me</h1>
+            <h1 className='header'>About Me</h1>
             <div className='stick-notes'>
                 <div className='stick-note about-me'>
                     <div className='pin'>

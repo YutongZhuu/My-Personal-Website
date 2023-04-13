@@ -20,7 +20,7 @@ const LinkLists = () => {
     }
     return (
         <div className="links">
-            <ul className="link-list">
+            <ul className="link-list"> 
                 <li>
                     <a href="https://www.linkedin.com/in/yutongzhu27" target="_blank">
                         <LinkedInIcon />

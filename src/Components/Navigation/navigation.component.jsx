@@ -3,8 +3,9 @@ import { ReactComponent as HomeIcon } from '../../OtherFile/home.icon.svg';
 import { ReactComponent as AboutMeIcon } from '../../OtherFile/about-me.icon.svg';
 import { ReactComponent as ContactMeIcon } from '../../OtherFile/contact-me.icon.svg';
 import { ReactComponent as ProjectsIcon } from '../../OtherFile/projects.icon.svg';
-import {  useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { scroll } from '../../Animation/scroll.animate';
+import LinkLists from '../Link-list/link-list';
 const Navigation = () => {
     const findBetweenArrayElements = (number, array) => {
         for (let i = 0; i < array.length; i++) {
@@ -22,10 +23,25 @@ const Navigation = () => {
             if (i == 0)
                 return 0;
             else
-                return h.offsetTop
+                return h.offsetTop-100
         });
         setHeaders(headersArray)
+        const nav_bar=document.getElementsByClassName('nav-bar')
         const scrollHandler = () => {
+            if(window.scrollY>50){
+                // console.log(nav_bar[0].className)
+                nav_bar[0].className='nav-bar nav-background'
+                // nav_bar[0].style.height
+                // const timer=setInterval(()=>{
+                //     nav_bar[0].style.height=20*window.innerWidth/100+'px';
+                //     console.log(nav_bar[0].style.height)
+                //     if(window.innerHeight>window.innerWidth) return 
+                //     nav_bar[0].style.height=parseInt(nav_bar[0].style.height-200)
+                //     if(parseInt(nav_bar[0].style.height==0))clearInterval(timer)
+                // }, 1)
+            }else{
+                nav_bar[0].className='nav-bar'
+            }
             if (iconClicked) return
             const icons = document.querySelectorAll('.navigation li')
             const iconNumber = findBetweenArrayElements(window.scrollY, headersArray)
@@ -50,14 +66,13 @@ const Navigation = () => {
         }
     }
 
-    const onMouseLeaveHandler = (event) => {
+    const onMouseLeaveHandler = () => {
         const scrollEvent = new Event('scroll');
         document.dispatchEvent(scrollEvent);
     }
 
     const onClickHandler = (event) => {
         setIconClicked(true);
-        // console.log(iconClicked, 'click')
         let target = event.target;
         if (target.tagName != 'LI' && target.tagName != 'svg' && target.tagName != 'path')
             return
@@ -65,7 +80,8 @@ const Navigation = () => {
             target = target.parentNode;
         }
 
-        const iconNumber = Array.from(target.parentNode.childNodes).findIndex((i) => i == target)
+        const iconNumber = Array.from(target.parentNode.childNodes).findIndex((i) => i == target);
+        console.log(headers[iconNumber])
         scroll(headers[iconNumber], 500);
         setTimeout(() => {
             setIconClicked(false);
@@ -73,21 +89,24 @@ const Navigation = () => {
     }
 
     return (
-        <div className="navigation">
-            <ul onMouseOver={onHoverHandler} onMouseLeave={onMouseLeaveHandler} onClick={onClickHandler}>
-                <li className='target-icon'>
-                    <HomeIcon />
-                </li>
-                <li>
-                    <AboutMeIcon />
-                </li>
-                <li>
-                    <ProjectsIcon />
-                </li>
-                <li>
-                    <ContactMeIcon />
-                </li>
-            </ul>
+        <div className='nav-bar'>
+            <LinkLists />
+            <div className="navigation">
+                <ul onMouseOver={onHoverHandler} onMouseLeave={onMouseLeaveHandler} onClick={onClickHandler} >
+                    <li className='target-icon'>
+                        <HomeIcon />
+                    </li>
+                    <li>
+                        <AboutMeIcon />
+                    </li>
+                    <li>
+                        <ProjectsIcon />
+                    </li>
+                    <li>
+                        <ContactMeIcon />
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 }

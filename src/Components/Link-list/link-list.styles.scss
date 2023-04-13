@@ -1,40 +1,50 @@
-    .link-list{
-        position: fixed;
+    .link-list {
+        height: 100%;
         width: 8em;
         z-index: 5;
         list-style: none;
         display: flex;
         justify-content: space-between;
-        li{    
+        margin: 0;
+        align-items: center;
+        
+        li {
+            // position: relative;
+            margin: 0;
             border-radius: 50%;
             height: 2em;
             width: 2em;
             cursor: pointer;
-            &:hover{
-                background-color: rgba(0,0,0,0.3); 
-            }
-            svg{
+
+            svg {
                 width: 1em;
                 transform: translate(50%, 50%);
             }
         }
     }
 
-    .resume{
+    .resume {
         display: none;
-        z-index: 4;
+        z-index: unset;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(0, 0, 0, 0.6);
         position: fixed;
-        top:0;
+        top: auto;
         overflow: scroll;
         padding: 15vh;
         overflow-x: hidden;
-        img{
+
+        img {
             width: 90vw;
             position: relative;
             left: 50%;
             transform: translate(-50%, 0);
+        }
+    }
+
+    .link-list li:hover {
+        @media (orientation :landscape) {
+            background-color: rgba(0, 0, 0, 0.2);
         }
     }

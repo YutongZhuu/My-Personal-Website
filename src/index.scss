@@ -1,11 +1,19 @@
 body {
   margin: 0;
-  color: #cd0a0a;
   font-family: 'Fira Sans', sans-serif;
   font-size: 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  .header{
+    display: block;
+    padding: 20px;
+    width: 100vw;
+    text-align: center;
+    margin: 10vh 0;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.5);
+  }
 }
 
 
