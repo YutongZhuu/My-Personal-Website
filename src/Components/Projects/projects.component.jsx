@@ -35,8 +35,9 @@ const projs = [{
     content: "This project is a to-do list built with jQuery, where you can practice your JavaScript and jQuery skills while implementing and customizing various to-do list features. Gain a deeper understanding of CSS and HTML while you style and structure the to-do list to suit your preferences."
 },{
     urlGit: 'https://github.com/YutongZhuu/Stair-Climbing-Robot-',
+    url:"https://www.youtube.com/shorts/80WDnjtPzlc",
     imgurl: StairClimbingRobot,
-    name: 'climbing',
+    name: 'Stair Climbing Robot',
     tech: 'C/RobotC',
     content: "Designed as a final project for the Digital Computation and Mechatronics Engineering courses, this robot built with RobotC IDE is capable of climbing stairs. The project addresses a real-world problem and aims to showcase proficiency in C programming and mechatronics engineering principles."
 }]
@@ -70,7 +71,7 @@ const Projects = () => {
                                     </p>
                                     <div>
                                         <Button url={proj.urlGit}>Repo</Button>
-                                        {id == 1 || id == 3 ? null : <Button url={proj.url}>Try It</Button>}
+                                        {id == 1 || id == 3 ? null : <Button url={proj.url}>{id===4?'Watch Our Demo':'Try It'}</Button>}
                                     </div>
                                 </div>
                                 <div className={id % 2 === 0 ? 'line' : ''} />
@@ -78,7 +79,6 @@ const Projects = () => {
                         )
                     })
                 }
-
             </div>
         </>
     )

@@ -74,8 +74,8 @@
 .nav-background {
     
         @media all and (orientation :landscape) {
-        backdrop-filter: saturate(50%)  blur(4px);
-        background-color: rgba(0, 0, 0, 0.6);
+        background: linear-gradient(rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.5) 70%,transparent);
+        backdrop-filter: blur(4px);
         height: 12vh;
         svg{
             fill: aqua;
