@@ -41,6 +41,7 @@
         .front {
             transform: rotateY(0deg);
             div{
+                backface-visibility: hidden;
                 flex-grow: 1;
                 background: linear-gradient(to bottom, white 60%, rgba(255, 255, 255, 0.4));
                 width: 100%;
@@ -64,6 +65,8 @@
                 bottom: 0;
                 max-width: 100%;
                 height: auto;
+                -webkit-mask-image: radial-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+                mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
             }
             
         }
@@ -74,7 +77,7 @@
             height: 100%;
             position: relative;
             bottom: 100%;
-            background: radial-gradient(white 60%, transparent);
+            background: radial-gradient(white 10%, transparent);
             transform: rotateY(-180deg);
             justify-content: center;
             align-items: center;
@@ -83,6 +86,7 @@
                 top:0.1em;
             }
             p{
+                height: 50%;
                 margin-top: 3em;
                 font-size: smaller;
             }
@@ -91,7 +95,6 @@
                 display: flex;
                 justify-content: space-around;
             }
-
         }
 
         &:hover .front {

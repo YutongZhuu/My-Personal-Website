@@ -3,36 +3,42 @@ import ECommerse from '../../OtherFile/E-commerse.png'
 import MyProfio from '../../OtherFile/personal-profolio.png'
 import MonsterRolodex from '../../OtherFile/MonsterRolodex.png'
 import ToDoList from '../../OtherFile/to-do-list.png'
+import StairClimbingRobot from '../../OtherFile/1AFinalProject.jpg'
 import Button from '../Button/button.component'
 
 const projs = [{
-    urlGit:"https://github.com/YutongZhuu/E-Commerse-Web",
-    url:"https://e-commerse-ytz.netlify.app",
+    urlGit: "https://github.com/YutongZhuu/E-Commerse-Web",
+    url: "https://e-commerse-ytz.netlify.app",
     imgurl: ECommerse,
     name: 'eCommerse Website',
-    tech: 'React/Firebase/SASS/JavaScript',
+    tech: 'React/Firebase/SASS/Redux',
     content: "This is an e-commerce website built on React.js and Redux. Fast, and user-friendly platform leverages React's component-based architecture and virtual DOM, along with Redux's state management capabilities. We've also integrated Firebase APIs for easy database management and authentication. "
 
 }, {
+    urlGit: "https://github.com/YutongZhuu/my-profolio",
     imgurl: MyProfio,
     name: 'Personal Profolio',
-    tech: 'React/SASS/JavaScript',
-    content: ""
+    tech: 'React/SASS',
+    content: "My personal portfolio website is built with React and styled with Sass for enhanced layout control. It features a responsive design and a carefully crafted UI/UX for a seamless user experience. The website showcases my skills in web development and passion for designing engaging and user-friendly interfaces."
 }, {
+    urlGit: "https://github.com/YutongZhuu/Monster-Rolodex",
+    url: "https://monsterrolodex-ytz.netlify.app",
     imgurl: MonsterRolodex,
     name: 'Monster Rolodex',
-    tech: 'React/CSS/JavaScript',
-    content: ""
+    tech: 'React/CSS',
+    content: "This project is built with React and focuses on practicing JSX syntax, hooks, class and function components. Gain valuable experience and deepen my understanding of React's core concepts through experimentation and building different components."
 }, {
     imgurl: ToDoList,
+    urlGit: "https://github.com/YutongZhuu/To-Do-List",
     name: 'To-Do List',
     tech: 'JQuery/CSS/JavaScript',
-    content: ""
+    content: "This project is a to-do list built with jQuery, where you can practice your JavaScript and jQuery skills while implementing and customizing various to-do list features. Gain a deeper understanding of CSS and HTML while you style and structure the to-do list to suit your preferences."
 },{
-    imgurl: ToDoList,
-    name: 'To-Do List',
-    tech: 'JQuery/CSS/JavaScript',
-    content: ""
+    urlGit: 'https://github.com/YutongZhuu/Stair-Climbing-Robot-',
+    imgurl: StairClimbingRobot,
+    name: 'climbing',
+    tech: 'C/RobotC',
+    content: "Designed as a final project for the Digital Computation and Mechatronics Engineering courses, this robot built with RobotC IDE is capable of climbing stairs. The project addresses a real-world problem and aims to showcase proficiency in C programming and mechatronics engineering principles."
 }]
 const Projects = () => {
 
@@ -60,14 +66,13 @@ const Projects = () => {
                                         {proj.name}
                                     </h2>
                                     <p>
-                                    {proj.content}  
+                                        {proj.content}
                                     </p>
                                     <div>
-                                    <Button url={proj.urlGit}>Repo</Button>
-                                    <Button url={proj.url}>Try It</Button>
+                                        <Button url={proj.urlGit}>Repo</Button>
+                                        {id == 1 || id == 3 ? null : <Button url={proj.url}>Try It</Button>}
                                     </div>
                                 </div>
-
                                 <div className={id % 2 === 0 ? 'line' : ''} />
                             </div>
                         )
