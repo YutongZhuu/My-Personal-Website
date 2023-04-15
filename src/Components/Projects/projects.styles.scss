@@ -17,15 +17,15 @@
     .projects-display {
         padding: 0;
         position: relative;
-        
+        height:60vh;
         @media (orientation:portrait) {
-            // border-radius: 0.2em;
             width: 90vw;
             margin: 20px auto;
         }
 
         .front,
         .back {
+            flex-grow: 0;
             position: relative;
             overflow: hidden;
             backface-visibility: hidden;
@@ -37,7 +37,7 @@
             box-shadow: 0 0 10px 2px #000000;
             border-radius: 30px;
         }
-
+        
         .front {
             transform: rotateY(0deg);
             div{
@@ -47,7 +47,6 @@
                 @media screen and (orientation:portrait) {
                     padding-top: 10%;
                 }
-                // padding-top: 10%;
                 h2{
                     width: 100%;
                     text-align: center;
@@ -66,19 +65,32 @@
                 max-width: 100%;
                 height: auto;
             }
-
+            
         }
-
+        
         .back {
+            padding: 0.5em;
             width: 100%;
             height: 100%;
             position: relative;
             bottom: 100%;
-            background-color: black;
-            color: aliceblue;
+            background: radial-gradient(white 60%, transparent);
             transform: rotateY(-180deg);
             justify-content: center;
             align-items: center;
+            h2{
+                position: absolute;
+                top:0.1em;
+            }
+            p{
+                margin-top: 3em;
+                font-size: smaller;
+            }
+            div{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+            }
 
         }
 
