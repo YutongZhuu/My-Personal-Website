@@ -9,9 +9,9 @@ This is my personal website, and there are two purposes for developing this webs
 ## Features
 **Responsive Layout**: This function is achieved using `CSS media queries`, which allows the website to run on different devices without affecting user experience.
 
-[Landscape View](/src/OtherFile/README1.png)
+！[Landscape View](/src/OtherFile/README1.png)
 
-[Portrait View](/src/OtherFile/README2.png)
+！[Portrait View](/src/OtherFile/README2.png)
 
 **Navigation Bar**: Basic `DOM` knowledge and `React hooks` are used to create the navigation bar. The Icon changes color according to the user's position in the document and has a function to navigate to different sections.
 
@@ -19,13 +19,13 @@ This is my personal website, and there are two purposes for developing this webs
 
 **Interesting Animations**: Based on personal interests, some interesting animation effects were created using `DOM` knowledge and `CSS` techniques, making the overall website more interesting and interactive.
 
-[Card Animation](/src/OtherFile/README4.png)
+！[Card Animation](/src/OtherFile/README4.png)
 
 **Contact**: The functionality of sending an email to my personal email address from my website is implemented using `EmailJS` and `JavaScript asynchronous functions`.
 
-[Contact Me Form](/src/OtherFile/README5.png)
+！[Contact Me Form](/src/OtherFile/README5.png)
 
-[Received Email](/src/OtherFile/README6.png)
+！[Received Email](/src/OtherFile/README6.png)
 
 
 
