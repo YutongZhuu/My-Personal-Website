@@ -9,7 +9,7 @@ This is my personal website, and there are two purposes for developing this webs
 ## Features
 **Responsive Layout**: This function is achieved using `CSS media queries`, which allows the website to run on different devices without affecting user experience.
 
-<img src="/src/OtherFile/README1.png" height="400"/> <img src="/src/OtherFile/README2.png" height="400"/> 
+<img src="/src/OtherFile/README1.png" height="300"/> <img src="/src/OtherFile/README2.png" height="300"/> 
 
 **Navigation Bar**: Basic `DOM` knowledge and `React hooks` are used to create the navigation bar. The Icon changes color according to the user's position in the document and has a function to navigate to different sections.
 
