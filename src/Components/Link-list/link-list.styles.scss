@@ -1,6 +1,6 @@
     .link-list {
         height: 100%;
-        width: 8em;
+        width: max-content;
         z-index: 5;
         list-style: none;
         display: flex;
@@ -16,30 +16,12 @@
             width: 2em;
             cursor: pointer;
 
+
+
             svg {
                 width: 1em;
                 transform: translate(50%, 50%);
             }
-        }
-    }
-
-    .resume {
-        display: none;
-        z-index: unset;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.6);
-        position: fixed;
-        top: auto;
-        overflow: scroll;
-        padding: 15vh;
-        overflow-x: hidden;
-
-        img {
-            width: 90vw;
-            position: relative;
-            left: 50%;
-            transform: translate(-50%, 0);
         }
     }
 

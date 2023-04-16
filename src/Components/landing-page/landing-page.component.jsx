@@ -29,7 +29,6 @@ const LandingPage = () => {
                 <div className='landing-page-title'>
                     <h1 >Yutong Zhu</h1>
                     <p>Frontend Developer</p>
-                    <Button>Contact Me</Button>
                 </div>
             </div>
         </>

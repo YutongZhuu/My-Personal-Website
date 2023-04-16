@@ -1,3 +1,4 @@
+import './contact-me.styles.scss'
 import { useState } from "react"
 import {send} from "@emailjs/browser"
 import Button from '../Button/button.component'
@@ -13,24 +14,39 @@ const ContactMe = () => {
         try{
             await send('service_8zt22mm', 'template_iuxfqsm', input, 'Dx-r_chV0nqDqnuDI');
             alert("email sent!")
+            setInput(initialInput)
         }catch(error){
             alert(error.text)
         }
     }
     const onChangeHandler = (e) => {
         setInput({ ...input, [e.target.name]: e.target.value })
-        console.log(e.target.name)
+        // const labels=document.querySelectorAll('label');
+        e.target.parentNode.childNodes[1].className=e.target.value==''?'':'shrink';
     }
     return (
+        <div className="contact-me">
+            <h1>
+                Contact Me
+            </h1>
         <form onSubmit={onSendEmailHandler} onChange={onChangeHandler}>
-            <label htmlFor="name">Name:</label>
-            <input htmltype="text" id="name" name="name" value={input.name} />
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" value={input.email} />
-            <label htmlFor="message">Message:</label>
-            <textarea type="text" id="message" name="message" value={input.message} />
-            <Button />
+            <span>
+            <input htmltype="text" id="name" name="name" value={input.name} required/>
+            <label htmlFor="name">Name</label>
+            </span>
+            <br/>
+            <span>
+            <input type="email" id="email" name="email" value={input.email} required/>
+            <label htmlFor="email">Email</label>
+            </span>
+            <br/>
+            <span>
+            <textarea rows='5' type="text" id="message" name="message" value={input.message} required/>
+            <label htmlFor="message">Message</label>
+            </span>
+            <Button>Send</Button>
         </form>
-    )
+        </div>
+    )   
 }
 export default ContactMe;
