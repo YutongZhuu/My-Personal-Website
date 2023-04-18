@@ -45,7 +45,8 @@ const Projects = () => {
 
     return (
         <>
-            <h1 className='header'>My Projects</h1>
+            <h1 className='header'>My <span>Projects
+                </span></h1>
             <div className="projects-section">
                 {
                     projs.map((proj, id) => {
@@ -71,7 +72,7 @@ const Projects = () => {
                                     </p>
                                     <div>
                                         <Button url={proj.urlGit}>Repo</Button>
-                                        {id == 1 || id == 3 ? null : <Button url={proj.url}>{id===4?'Watch Our Demo':'Try It'}</Button>}
+                                        {id == 1 || id == 3 ? null : <Button url={proj.url}>{id===4?'Demo':'Try It'}</Button>}
                                     </div>
                                 </div>
                                 <div className={id % 2 === 0 ? 'line' : ''} />

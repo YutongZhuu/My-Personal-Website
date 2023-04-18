@@ -39,7 +39,7 @@ const AboutMe = () => {
 
     const onHoverHandler = (event) => {
         setInputValue("");
-        const input = event.target.parentNode.parentNode.childNodes[1].childNodes[1];
+        const input = event.target.parentNode.parentNode.parentNode.childNodes[1].childNodes[1];
         const name = event.target.name + " !";
         let counter = 0;
 
@@ -57,28 +57,25 @@ const AboutMe = () => {
     };
     return (
         <div className="about-me">
-            <h1 className='header'>About Me</h1>
-            <div className='stick-notes'>
-                <div className='stick-note about-me'>
-                    <div className='pin'>
-                        <div />
+            <div className='about-me-intro'>
+                <h1><span>About</span> Me</h1>
+                <div>
+                    <div>
+                        I'm Yutong, a <span>
+                            Mechatronics Engineering
+                            student at the University of Waterloo
+                        </span> . I've been coding since high school, but fell in love with programming thanks to an awesome professor in my first year. I'm particularly interested in frontend technologies, and love tinkering with code to create new things. Thanks for visiting my website, and feel free to check out my work!
                     </div>
-                    <p>Hey there! </p>
-                    <p>
-                        I'm Yutong, a Mechatronics Engineering student at the University of Waterloo. I've been coding since high school, but fell in love with programming thanks to an awesome professor in my first year. I'm particularly interested in frontend technologies, and love tinkering with code to create new things. Thanks for visiting my website, and feel free to check out my work!
-                    </p>
+                </div>
+            </div>
+
+            <div className='skill-section'>
+                <div className='skills-title'>
+                    <p>What do I know?</p>
+                    <input value={inputValue} />
                 </div>
 
-                <div className='stick-note skills'>
-                    <div className='pin'>
-                        <div />
-                    </div>
-
-                    <div className='skills-title'>
-                        <p>What do I know?</p>
-                        <input value={inputValue} />
-                    </div>
-
+                <div className='skills'>
                     {
                         skills.map(({ imgUrl, skill }, i) => {
                             return (
@@ -88,10 +85,13 @@ const AboutMe = () => {
                             )
                         })
                     }
-
                 </div>
+
             </div>
+
+
         </div>
+
     )
 }
 

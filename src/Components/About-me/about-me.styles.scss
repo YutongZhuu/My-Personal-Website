@@ -1,48 +1,53 @@
+@import '../../index.scss';
+
 .about-me {
     color: black;
     width: 100%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.5);
+    padding: 5vw;
 
-    .stick-notes {
+    .about-me-intro {
         display: flex;
-        background-color: rgba(106, 235, 235, 1);
+        margin-bottom: 60px;
+        h1 {
+            text-align: center;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
 
-        @media screen and (orientation:portrait) {
-            display: block;
+            span {
+                color: $contract
+            }
         }
+
+        div {
+            background-color: black;
+            padding: 0;
+            border-radius: 10px;
+            div {
+
+                height: 100%;
+                margin: 0;
+                padding: 20px;
+                background-color: darken($mainColor, 6%);
+                width: 80vw;
+                transition: transform;
+
+                &:hover {
+                    transform: translate(3%, 5%);
+                }
+
+                span {
+                    color: $contract
+                }
+
+            }
+        }
+
     }
 
-    .stick-note {
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.5);
-        font-family: 'Patrick Hand', cursive;
-        font-size: 0.8em;
-        width: 40%;
-        height: auto;
-        margin: 40px;
-        padding: 20px;
-        text-underline-offset: 0.4em;
-        line-height: 2em;
-        position: relative;
-
-        @media screen and (orientation: portrait) {
-            font-size: 0.6em;
-            width: 80%;
-            margin: 40px auto;
-        }
-    }
-
-    .skills {
-        @media screen and (orientation: landscape) {
-            width: 30vw;
-            margin-left: 10vw;
-        }
-
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 1.2em;
-        position: relative;
-        bottom: 2em;
+    .skill-section {
         text-align: center;
-        
+
         .skills-title {
             grid-column-start: 1;
             grid-column-end: 4;
@@ -52,7 +57,7 @@
                 line-height: 0;
             }
 
-            input{
+            input {
                 height: 3em;
                 border-radius: 20px;
                 text-align: center;
@@ -60,14 +65,20 @@
                 font-size: 1em;
                 border-right: 3px solid black;
                 border-bottom: 3px solid black;
+
                 &:disabled {
                     background-color: white;
                     opacity: 1 !important;
-                  }
+                }
             }
         }
-        
-        div {
+
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 30px;
+
             img {
                 background-color: white;
                 height: 3em;

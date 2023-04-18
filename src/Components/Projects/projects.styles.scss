@@ -1,6 +1,16 @@
+@import '../../index.scss';
+h1{
+    span{
+        color:$contract;
+        font-size: unset;
+    }
+    color: rgb(0, 0, 0);
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 2px 2px 0px #000, 0px 2px 0px #000;
+}
 .projects-section {
-    background-color: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgb(255, 255, 255)10%, rgb(5, 255, 255) 30%, rgb(199, 255, 248) 60%);
     width: 100vw;
     padding: 5vw;
     display: grid;
@@ -11,6 +21,7 @@
         grid-template-columns: 1fr;
 
     }
+    
 
     
 
@@ -43,7 +54,7 @@
             div{
                 backface-visibility: hidden;
                 flex-grow: 1;
-                background: linear-gradient(to bottom, white 60%, rgba(255, 255, 255, 0.4));
+                background: linear-gradient(to bottom, $adjacent 10%, rgba(255, 255, 255, 0.4));
                 width: 100%;
                 @media screen and (orientation:portrait) {
                     padding-top: 10%;

@@ -3,7 +3,7 @@ const Button=({children, url})=>{
     return(
         <div>
             <a href={url}target="_blank">
-        <button className="button">
+        <button className={"button"}>
             {children}
         </button>
             </a>

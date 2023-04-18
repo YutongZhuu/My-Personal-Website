@@ -1,15 +1,20 @@
-    .link-list {
-        height: 100%;
-        width: max-content;
-        z-index: 5;
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        align-items: center;
-        
-        li {
-            // position: relative;
+@import '../../index';
+
+ .link-list {
+      
+    @media (orientation :portrait) {
+        padding-inline-start: 0;
+     }
+     height: 100%;
+     width: max-content;
+     z-index: 5;
+     list-style: none;
+     display: flex;
+     justify-content: space-between;
+     margin: 0;
+     align-items: center;
+
+     li {
             margin: 0;
             border-radius: 50%;
             height: 2em;
@@ -27,6 +32,7 @@
 
     .link-list li:hover {
         @media (orientation :landscape) {
+            transition: all ease 600ms;;
             background-color: rgba(0, 0, 0, 0.2);
         }
     }

@@ -22,11 +22,11 @@ const LinkLists = () => {
                         <ResumeIcon />
                     </a>
                 </li>
-                <li >
+                {/* <li >
                     <a href="mailto:y25zhu@uwaterloo.ca" target="_blank">
                         <EmailIcon />
                     </a>
-                </li>
+                </li> */}
             </ul>
         </div>
     )
