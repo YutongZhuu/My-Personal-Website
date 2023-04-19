@@ -21,7 +21,6 @@ const ContactMe = () => {
     }
     const onChangeHandler = (e) => {
         setInput({ ...input, [e.target.name]: e.target.value })
-        // const labels=document.querySelectorAll('label');
         e.target.parentNode.childNodes[1].className=e.target.value==''?'':'shrink';
     }
     return (
@@ -31,17 +30,17 @@ const ContactMe = () => {
             </h1>
         <form onSubmit={onSendEmailHandler} onChange={onChangeHandler}>
             <span>
-            <input htmltype="text" id="name" name="name" value={input.name} required/>
+            <input htmltype="text" id="name" name="name" value={input.name} required onChange={()=>{}}/>
             <label htmlFor="name">Name</label>
             </span>
             <br/>
             <span>
-            <input type="email" id="email" name="email" value={input.email} required/>
+            <input type="email" id="email" name="email" value={input.email} required onChange={()=>{}}/>
             <label htmlFor="email">Email</label>
             </span>
             <br/>
             <span>
-            <textarea rows='5' type="text" id="message" name="message" value={input.message} required/>
+            <textarea rows='5' type="text" id="message" name="message" value={input.message} required onChange={()=>{}}/>
             <label htmlFor="message">Message</label>
             </span>
             <Button>Send</Button>

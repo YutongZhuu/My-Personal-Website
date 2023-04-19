@@ -72,7 +72,7 @@ const AboutMe = () => {
             <div className='skill-section'>
                 <div className='skills-title'>
                     <p>What do I know?</p>
-                    <input value={inputValue} />
+                    <input value={inputValue} onChange={()=>{}}/>
                 </div>
 
                 <div className='skills'>
