@@ -18,7 +18,7 @@ const LandingPage = ({orientation}) => {
                 <div className='landing-page-title'>
                     <p>Hello</p>
                     <h1 >I am <span>Yutong</span> Zhu</h1>
-                    <p>Welcome to my <span>profilio</span></p>
+                    <p>Welcome to my <span>personal website</span></p>
                     <br/>
                     <Button url="mailto:y25zhu@uwaterloo.ca">Email Me
                     <EmailSvg/>

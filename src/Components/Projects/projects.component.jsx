@@ -17,7 +17,7 @@ const projs = [{
 }, {
     urlGit: "https://github.com/YutongZhuu/my-profolio",
     imgurl: MyProfio,
-    name: 'Personal Profolio',
+    name: 'Personal Website',
     tech: 'React/SASS',
     content: "My personal portfolio website is built with React and styled with Sass for enhanced layout control. It features a responsive design and a carefully crafted UI/UX for a seamless user experience. The website showcases my skills in web development and passion for designing engaging and user-friendly interfaces."
 }, {
