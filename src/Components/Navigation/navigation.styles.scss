@@ -40,6 +40,7 @@
                 p{
                     line-height: 15vh;
                     margin: 0;
+                    font-weight: bold;
                 }
                 cursor: pointer;
                 svg {
@@ -76,5 +77,5 @@
 .nav-background {
         background:rgba(darken($mainColor, 10%), 0.8);
         backdrop-filter: blur(4px);
-        height: 12vh;
+        height: 10vh;
     }

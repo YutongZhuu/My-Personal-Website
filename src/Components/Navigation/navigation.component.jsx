@@ -22,7 +22,7 @@ const Navigation = ({orientation}) => {
             if (i == 0)
                 return 0;
             else
-                return h.offsetTop-(window.innerWidth<window.innerHeight? 0 : 80)
+                return h.offsetTop-90;
         });
         setHeaders(headersArray)
         const nav_bar=document.getElementsByClassName('nav-bar')
@@ -65,7 +65,6 @@ const Navigation = ({orientation}) => {
     }
 
     const onClickHandler = (event) => {
-        console.log(1)
         setIconClicked(true);
         let target = event.target;
         if (target.tagName != 'LI' && target.tagName != 'svg' && target.tagName != 'path' &&  target.tagName != 'P')
@@ -75,7 +74,7 @@ const Navigation = ({orientation}) => {
         }
 
         const iconNumber = Array.from(target.parentNode.childNodes).findIndex((i) => i == target);
-        scroll(headers[iconNumber], 500);
+        scroll(headers[iconNumber], 1200);
         setTimeout(() => {
             setIconClicked(false);
         }, 500)

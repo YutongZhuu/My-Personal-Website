@@ -18,7 +18,7 @@ const LinkLists = () => {
                     </a>
                 </li>
                 <li >
-                    <a href="https://drive.google.com/file/d/1fGTyLtwLKEITbj2IGelMuPBgopKWjPWQ/view?usp=sharing" target="_blank">
+                    <a href="https://drive.google.com/file/d/1VtLoPDtG7XHpf3quuGmoixg06IHa-ItO/view?usp=sharing" target="_blank">
                         <ResumeIcon />
                     </a>
                 </li>
