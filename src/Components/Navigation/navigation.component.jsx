@@ -5,7 +5,8 @@ The component renders either an IconList or a WordList component based on the or
 */
 import './navigation.styles.scss';
 import { useEffect, useState } from 'react';
-import { scroll } from '../../Animation/scroll.animate';
+// import { scroll } from '../../Animation/scroll.animate';
+import { useScroll } from '../../Hooks/useScroll';
 import LinkLists from '../Link-list/link-list';
 import IconList from '../Icon-List/Icon-List';
 import WordList from '../Word-List/word-list.component';
@@ -22,6 +23,7 @@ const findBetweenArrayElements = (number, array) => { //Function that is used fo
 
 const Navigation = ({ orientation }) => {
 
+    const [cancel, scroll] = useScroll();
     const [headers, setHeaders] = useState(null);
     const [iconClicked, setIconClicked] = useState(false)
 
@@ -56,7 +58,7 @@ const Navigation = ({ orientation }) => {
         const iconNumber = Array.from(target.parentNode.childNodes).findIndex((i) => i == target);
         scroll(headers[iconNumber]);
     }
-    
+
     useEffect(() => {
         const headersArray = Array.from(document.querySelectorAll('h1')).map((h, i) => {
             if (i == 0)
@@ -80,13 +82,23 @@ const Navigation = ({ orientation }) => {
             })
             iconNumber ? icons[iconNumber].className = 'target-icon' : icons[0].className = 'target-icon'
         }
-        document.addEventListener('scroll', scrollHandler)
+        document.addEventListener('scroll', scrollHandler);
         const scrollEvent = new Event('scroll');
         document.dispatchEvent(scrollEvent);
         return () => {
             document.removeEventListener('scroll', scrollHandler);
         };
     }, [iconClicked])
+    
+    useEffect(()=>{
+        const cancelhandler=()=>{
+            cancel();
+        }
+        document.addEventListener('wheel', cancelhandler);
+        return ()=>{
+            document.removeEventListener('wheel', cancelhandler);
+        }
+    })
 
     return (
 

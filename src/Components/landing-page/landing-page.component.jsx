@@ -8,7 +8,7 @@ const LandingPage = ({orientation}) => {
 
     useEffect(() => {
         const pageTitle = document.querySelector('.landing-page-title');
-        const px = !orientation ? (40 * window.innerHeight/ 100) : 20
+        const px = !orientation ? (40 * window.innerHeight/ 100) : 40
         fadeIn(pageTitle, 'left', px, 2000)
     }, [orientation])
 
