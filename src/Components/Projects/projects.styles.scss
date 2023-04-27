@@ -88,7 +88,8 @@ h1{
             height: 100%;
             position: relative;
             bottom: 100%;
-            background: radial-gradient(white 10%, transparent);
+            background: radial-gradient($adjacent 50%, transparent);
+
             transform: rotateY(-180deg);
             justify-content: center;
             align-items: center;

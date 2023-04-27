@@ -1,5 +1,5 @@
 import './landing-page.styles.scss'
-import Button from '../Button/button.component';
+import Button from '../../Components/Button/button.component';
 import { fadeIn } from '../../Animation/fade-in.animate';
 import { useEffect, useState } from 'react';
 import {ReactComponent as EmailSvg} from '../../OtherFile/email.icon.svg'

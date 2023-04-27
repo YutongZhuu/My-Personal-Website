@@ -14,16 +14,12 @@ export const useScroll = () => {
         window.scrollBy(0, step);
         if (Math.abs(target - currentValue) !== 0) {
             setRequestId(requestAnimationFrame(() => animation(target)));
-        }else{
-            console.log('stop')
         }
     }
 
     const cancel = () => {
         if (!requestId) return
         cancelAnimationFrame(requestId);
-        // setRequestId(null);
-        // animation(0);
         console.log(requestId);
     }
 

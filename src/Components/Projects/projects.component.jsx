@@ -15,12 +15,6 @@ const projs = [{
     content: "This is an e-commerce website built on React.js and Redux. Fast, and user-friendly platform leverages React's component-based architecture and virtual DOM, along with Redux's state management capabilities. We've also integrated Firebase APIs for easy database management and authentication. "
 
 }, {
-    urlGit: "https://github.com/YutongZhuu/my-profolio",
-    imgurl: MyProfio,
-    name: 'Personal Website',
-    tech: 'React/SASS',
-    content: "My personal portfolio website is built with React and styled with Sass for enhanced layout control. It features a responsive design and a carefully crafted UI/UX for a seamless user experience. The website showcases my skills in web development and passion for designing engaging and user-friendly interfaces."
-}, {
     urlGit: "https://github.com/YutongZhuu/Monster-Rolodex",
     url: "https://monsterrolodex-ytz.netlify.app",
     imgurl: MonsterRolodex,
@@ -72,7 +66,7 @@ const Projects = () => {
                                     </p>
                                     <div>
                                         <Button url={proj.urlGit}>Repo</Button>
-                                        {id == 1 || id == 3 ? null : <Button url={proj.url}>{id===4?'Demo':'Try It'}</Button>}
+                                        {id == 1 || proj.name == 'To-Do List' ? null : <Button url={proj.url}>{proj.name==='Stair Climbing Robot'?'Demo':'Try It'}</Button>}
                                     </div>
                                 </div>
                                 <div className={id % 2 === 0 ? 'line' : ''} />

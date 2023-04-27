@@ -1,9 +1,10 @@
+import './word-list.styles.scss'
 const list=['Home', 'About', 'Projects', 'Contact']
 
 const WordList=({onMouseLeaveHandler, onHoverHandler, onClickHandler})=>{
     return(
         <div className="navigation">
-            <ul onMouseLeave={onMouseLeaveHandler} onMouseOver={onHoverHandler} onClick={onClickHandler}>
+            <ul className="word-list"onMouseLeave={onMouseLeaveHandler} onMouseOver={onHoverHandler} onClick={onClickHandler}>
            { list.map((word, n)=>{
                 return(
                     <li key={n}>
