@@ -9,7 +9,8 @@
     "watch": "npm run server & npm run client",
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "npm i --prefix client && npm i --prefix server",
-    "deploy":"npm run build --prefix client && npm start --prefix server"
+    "deploy":"npm run build --prefix client && npm start --prefix server",
+    "build":"npm run build --prefix client"
   },
   "author": "",
   "license": "ISC"
