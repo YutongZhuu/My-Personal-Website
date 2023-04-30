@@ -5,7 +5,6 @@ The component renders either an IconList or a WordList component based on the or
 */
 import './navigation.styles.scss';
 import { useEffect, useState } from 'react';
-// import { scroll } from '../../Animation/scroll.animate';
 import { useScroll } from '../../Hooks/useScroll';
 import LinkLists from '../Link-list/link-list';
 import IconList from '../Icon-List/Icon-List';

@@ -1,0 +1,16 @@
+{
+  "name": "my-personal-website",
+  "version": "1.0.0",
+  "description": "This is my personal website, and there are two purposes for developing this website: 1. to provide a platform for people to know more about me, and 2. to practice the `React` framework and responsive `CSS` layout. ## Tools **Language**: `JavaScript`  `SASS`  `HTML`",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run watch --prefix server",
+    "client":"npm start --prefix client",
+    "watch": "npm run server & npm run client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "npm i --prefix client && npm i --prefix server",
+    "deploy":"npm run build --prefix client && npm start --prefix server"
+  },
+  "author": "",
+  "license": "ISC"
+}

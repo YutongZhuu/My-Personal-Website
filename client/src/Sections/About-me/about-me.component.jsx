@@ -1,5 +1,8 @@
 import './about-me.styles.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import {useContent} from '../../Hooks/useContent'
+
+
 const skills = [
     {
         imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/900px-JavaScript-logo.png?20120221235433",
@@ -33,9 +36,13 @@ const skills = [
         skill: 'Git'
     }
 ]
+
+
 const AboutMe = () => {
     const [inputValue, setInputValue] = useState("");
     const [timer, setTimer] = useState(null);
+    const fetchedData = useContent("");
+    // console.log(fetchedData)
 
     const onHoverHandler = (event) => {
         setInputValue("");
@@ -55,16 +62,14 @@ const AboutMe = () => {
         }, 40);
         setTimer(Timer);
     };
+
     return (
         <div className="about-me">
             <div className='about-me-intro'>
                 <h1><span>About</span> Me</h1>
                 <div>
                     <div>
-                        I'm Yutong, a <span>
-                            Mechatronics Engineering
-                            student at the University of Waterloo
-                        </span> . I've been coding since high school, but fell in love with programming thanks to an awesome professor in my first year. I'm particularly interested in frontend technologies, and love tinkering with code to create new things. Thanks for visiting my website, and feel free to check out my work!
+                        {fetchedData[0]? fetchedData[0].content : "Loading..."}
                     </div>
                 </div>
             </div>
@@ -72,7 +77,7 @@ const AboutMe = () => {
             <div className='skill-section'>
                 <div className='skills-title'>
                     <p>What do I know?</p>
-                    <input value={inputValue} onChange={()=>{}}/>
+                    <input value={inputValue} onChange={() => {}} />
                 </div>
 
                 <div className='skills'>

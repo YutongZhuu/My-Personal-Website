@@ -4,7 +4,7 @@ import MyProfio from '../../OtherFile/personal-profolio.png'
 import MonsterRolodex from '../../OtherFile/MonsterRolodex.png'
 import ToDoList from '../../OtherFile/to-do-list.png'
 import StairClimbingRobot from '../../OtherFile/1AFinalProject.jpg'
-import Button from '../Button/button.component'
+import Button from '../../Components/Button/button.component'
 
 const projs = [{
     urlGit: "https://github.com/YutongZhuu/E-Commerse-Web",
@@ -66,7 +66,7 @@ const Projects = () => {
                                     </p>
                                     <div>
                                         <Button url={proj.urlGit}>Repo</Button>
-                                        {id == 1 || proj.name == 'To-Do List' ? null : <Button url={proj.url}>{proj.name==='Stair Climbing Robot'?'Demo':'Try It'}</Button>}
+                                        {proj.name == 'To-Do List' ? null : <Button url={proj.url}>{proj.name==='Stair Climbing Robot'?'Demo':'Try It'}</Button>}
                                     </div>
                                 </div>
                                 <div className={id % 2 === 0 ? 'line' : ''} />

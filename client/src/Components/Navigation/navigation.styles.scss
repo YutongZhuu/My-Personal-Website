@@ -8,7 +8,7 @@
     z-index: 4;
     height: 15vh;
     transition: height 0.5s ease-in-out;
-    background-color: darken($mainColor, 2%);
+    background-color: $adjacent;
 
     .navigation {
         position: relative;
@@ -17,77 +17,13 @@
         color: black;
         z-index: 2;
         display: flex;
-
-        // ul {
-        //     padding-left: 0;
-        //     display: flex;
-        //     align-content: center;
-        //     flex-wrap: wrap;
-        //     justify-content: space-evenly;
-        //     flex-direction: column;
-        //     list-style: none;
-        //     width: 100%;
-        //     height: 100%;
-        //     margin: 0;
-        //     flex-direction: row;
-
-
-            // li.navigation {
-            //     width: max-content;
-            //     border-radius: 50%;
-            //     position: relative;
-            //     width: 60px;
-            // }
-
-            // li {
-            //     width: 10%;
-            //     border-radius: 5px;
-            //     text-align: center;
-            //     height: 100%;
-            //     display: flex;
-            //     align-items: center;
-            //     justify-content: center;
-            //     cursor: pointer;
-            //     p {
-            //         margin: 0;
-            //         font-weight: bold;
-            //     }
-
-            //     svg {
-            //         height: 60%;
-            //         width: 60%;
-            //         position: absolute;
-            //         left: 50%;
-            //         top: 50%;
-            //         transform: translate(-50%, -50%);
-            //         fill: rgb(0, 0, 0);
-            //     }
-
-            //     @media screen and (orientation:portrait) {
-            //         height: 40px;
-            //         width: 40px;
-            //     }
-            // }
-        }
-
-        // li.target-icon {
-        //     border-bottom: 5px solid $contract;
-        //     svg {
-        //         fill: $contract;
-        //     }
-
-        //     p {
-        //         color: darken($contract, 5%)
-        //     }
-        // }
     }
 
-// }
-
+}
 
 
 .nav-background {
-    background: rgba(darken($mainColor, 10%), 0.8);
+    background: rgba(lighten($adjacent, 10%), 0.8);
     backdrop-filter: blur(4px);
     height: 10vh;
 }

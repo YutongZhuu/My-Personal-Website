@@ -1,7 +1,7 @@
 import './contact-me.styles.scss'
 import { useState } from "react"
 import {send} from "@emailjs/browser"
-import Button from '../Button/button.component'
+import Button from '../../Components/Button/button.component'
 const initialInput = {
     name: "",
     email: "",
