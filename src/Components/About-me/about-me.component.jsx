@@ -62,7 +62,7 @@ const AboutMe = () => {
                 <div>
                     <div>
                         I'm Yutong, a <span>
-                            Mechatronics Engineering
+                            Computer Engineering
                             student at the University of Waterloo
                         </span> . I've been coding since high school, but fell in love with programming thanks to an awesome professor in my first year. I'm particularly interested in frontend technologies, and love tinkering with code to create new things. Thanks for visiting my website, and feel free to check out my work!
                     </div>
