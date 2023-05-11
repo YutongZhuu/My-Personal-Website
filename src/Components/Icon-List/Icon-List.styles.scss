@@ -1,0 +1,36 @@
+@import '../../index.scss';
+
+.icon-list {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+
+    svg {
+        fill: $contract;
+        height: 2em;
+        transition: transform 0.25s ease-in-out
+    }
+
+    .rotate>svg {
+        transform: rotate(90deg);
+    }
+
+    ul {
+        width: 30vw;
+        list-style: none;
+        position: absolute;
+        top: -10vh;
+        left: -10vw;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        // background-color: darken($mainColor, 3%);
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        z-index: -1;
+        &.display {
+            top: 10vh;
+            opacity: 1;
+        }
+    }
+}

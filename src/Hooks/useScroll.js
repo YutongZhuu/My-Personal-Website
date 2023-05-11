@@ -20,7 +20,6 @@ export const useScroll = () => {
     const cancel = () => {
         if (!requestId) return
         cancelAnimationFrame(requestId);
-        console.log(requestId);
     }
 
     const scroll = (target) => {
